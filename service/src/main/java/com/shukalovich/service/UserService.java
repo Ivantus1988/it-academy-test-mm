@@ -22,38 +22,22 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-    public List<UserReadDto> findAll() {
-        return userRepository.findAll()
-                .stream()
-                .map(user -> new UserReadDto(
-                        user.getSurName(),
-                        user.getName(),
-                        user.getPatronymicName(),
-                        user.getRole(),
-                        user.getEmail()
-                ))
-                .sorted(Comparator.comparing(UserReadDto::email))
-                .collect(Collectors.toList());
-    }
-
     public Optional<UserEntity> createUser(UserCreationDto registrationUser) {
 
-        UserEntity user = getBuild(registrationUser);
-
-        return Optional.of(userRepository.save(user));
-    }
-
-    public List<UserEntity> findByFilter(UserFilter filter) {
-        return userRepository.findByFilter(filter);
-    }
-
-    private static UserEntity getBuild(UserCreationDto registrationUser) {
-        return UserEntity.builder()
+        return Optional.of(userRepository.save(UserEntity.builder()
                 .surName(registrationUser.surName())
                 .name(registrationUser.name())
                 .patronymicName(registrationUser.patronymicName())
                 .role(registrationUser.role())
                 .email(registrationUser.email())
-                .build();
+                .build()));
     }
+
+    public List<UserEntity> findByFilter(UserFilter filter) {
+        return userRepository.findByFilter(filter)
+                .stream()
+                .sorted(Comparator.comparing(UserEntity::getEmail))
+                .collect(Collectors.toList());
+    }
+
 }

@@ -14,8 +14,7 @@ public class WebDispatcherInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(final ServletContext sc) throws ServletException {
 
-        AnnotationConfigWebApplicationContext root =
-                new AnnotationConfigWebApplicationContext();
+        AnnotationConfigWebApplicationContext root = new AnnotationConfigWebApplicationContext();
 
         root.scan("com.shukalovich");
         sc.addListener(new ContextLoaderListener(root));

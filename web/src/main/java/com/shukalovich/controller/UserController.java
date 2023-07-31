@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -27,16 +28,10 @@ public class UserController {
 
     private final UserService userService;
 
-    @GetMapping(path = "rest", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "users", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<UserEntity> getAllUsers(UserFilter filter) {
         return userService.findByFilter(filter);
-    }
-
-    @GetMapping
-    public String getAllUsersPage(Model model) {
-        model.addAttribute("users", userService.findAll());
-        return "user/users";
     }
 
     @GetMapping(path = "/new")
@@ -45,16 +40,15 @@ public class UserController {
     }
 
     @PostMapping(path = "/new")
-    public String saveUser(@ModelAttribute("user") @Valid UserCreationDto userDto,
-    BindingResult bindingResult) {
+    public String saveUser(@ModelAttribute("user") @Valid UserCreationDto userCreationDto,
+    BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 
         if (bindingResult.hasErrors()) {
             return "user/new";
         }
 
-        return userService.createUser(userDto)
-                .map(user -> "redirect:/user")
+        return userService.createUser(userCreationDto)
+                .map(user    -> "redirect:/user")
                 .orElse("redirect:/user/new?error");
-
     }
 }

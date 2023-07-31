@@ -2,24 +2,20 @@ package com.shukalovich.dto;
 
 import com.shukalovich.entity.enam.Role;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 public record UserCreationDto(@NotEmpty(message = "Surname cannot be empty.")
-                              @Min(value = 2, message = "Minimum surname length 2 characters.")
-                              @Max(value = 40, message = "Maximum surname length 40 characters.")
-                              @Pattern(regexp = "[A-Za-z]", message = "Only latin letters can be used.")
+                              @Size(min = 2, max = 40, message = "Minimum surname length 2 characters, maximum surname length 40 characters")
+                              @Pattern(regexp = "[a-zA-Z]{0,40}", message = "Only latin letters can be used.")
                               String surName,
                               @NotEmpty(message = "Name cannot be empty.")
-                              @Min(value = 2, message = "Minimum surname length 2 characters.")
-                              @Max(value = 20, message = "Maximum surname length 40 characters.")
-                              @Pattern(regexp = "[A-Za-z]", message = "Only latin letters can be used.")
+                              @Size(min = 2, max = 20, message = "Minimum name length 2 characters, maximum name length 20 characters")
+                              @Pattern(regexp = "[a-zA-Z]{2,20}", message = "Only latin letters can be used.")
                               String name,
-                              @Min(value = 2, message = "Minimum surname length 2 characters.")
-                              @Max(value = 40, message = "Maximum surname length 40 characters.")
-                              @Pattern(regexp = "[A-Za-z]", message = "Only latin letters can be used.")
+                              @Size(max = 40, message = "Maximum patronymic name length 40 characters")
+                              @Pattern(regexp = "[a-zA-Z]{0,40}", message = "Only latin letters can be used.")
                               String patronymicName,
                               Role role,
                               @NotEmpty(message = "Email should not be empty.")
