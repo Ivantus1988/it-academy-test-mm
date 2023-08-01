@@ -13,18 +13,18 @@
     <artifactId>database</artifactId>
 
     <properties>
-        <flyway.user>postgres</flyway.user>
-        <flyway.password>postgres</flyway.password>
+        <flyway.user>root</flyway.user>
+        <flyway.password>password</flyway.password>
         <flyway.schemas>public</flyway.schemas>
-        <flyway.url>jdbc:postgresql://localhost:5430/postgres</flyway.url>
+        <flyway.url>jdbc:mysql://localhost:3306</flyway.url>
     </properties>
 
     <dependencies>
 
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${postgresql.version}</version>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>${mysql.connector.version}</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -73,9 +73,14 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
-            <version>8.5.13</version>
+            <version>${flyway.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.flywaydb.enterprise</groupId>
+            <artifactId>flyway-mysql</artifactId>
+            <version>${flyway.version}</version>
+        </dependency>
+        
     </dependencies>
 
     <build>
@@ -83,7 +88,7 @@
             <plugin>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
-                <version>8.5.13</version>
+                <version>${flyway.version}</version>
             </plugin>
         </plugins>
     </build>

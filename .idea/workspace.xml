@@ -9,41 +9,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da95d472-3143-4cd9-a25b-57b32ccca4b8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/config/DatabaseConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/dto/UserCreationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/dto/UserFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/dto/UserReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/entity/enam/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/repository/UserRepositoryExtension.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/resources/db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/main/resources/hibernate.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/test/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/test/resources/hibernate.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/test/resources/sql/purge-data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/src/test/resources/sql/test-data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/shukalovich/config/ServiceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/shukalovich/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/config/WebDispatcherInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/util/PagesUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/user/users.html" afterDir="false" />
+    <list default="true" id="da95d472-3143-4cd9-a25b-57b32ccca4b8" name="Changes" comment="Added flyway migration and validation.">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.local.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/database/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/config/DatabaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/main/java/com/shukalovich/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/resources/db/migration/V1__create_user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/main/resources/db/migration/V1__create_user.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/resources/db/migration/V2__update_table_users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/main/resources/hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/test/resources/sql/purge-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/test/resources/sql/purge-data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/shukalovich/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/shukalovich/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/config/WebDispatcherInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/config/WebDispatcherInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/util/PagesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/shukalovich/util/PagesUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/user/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/user/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/user/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/user/users.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,14 +52,22 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2T9beUkI3vEM7hEndAMka50geN8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -78,29 +75,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "/Users/ivan/Desktop/demo-mm-project/it-academy-test-mm/database/src/test/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ivan/Desktop/demo-mm-project/it-academy-test-mm/database/src/test/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;61569ea01f291e7c8261b91ef14dd835&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;mysql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.shukalovich.database.dto" />
@@ -113,6 +116,7 @@
       <recent name="$PROJECT_DIR$/web/src/main/java/com/shukalovich" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view" />
       <recent name="$PROJECT_DIR$/database/src/test/resources/sql" />
       <recent name="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/view/user" />
       <recent name="$PROJECT_DIR$/web/src/main/webapp/WEB-INF" />
@@ -132,22 +136,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserRepositoryTest">
-    <configuration name="UserRepositoryExtensionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="database" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shukalovich.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shukalovich.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.shukalovich.repository.UserRepositoryExtensionTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
     <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="database" />
       <extension name="coverage">
@@ -163,39 +152,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRepositoryTest.whenCreatedInvokedWithUser_ThenUserSaved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="database" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shukalovich.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shukalovich.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.shukalovich.repository.UserRepositoryTest" />
-      <option name="METHOD_NAME" value="whenCreatedInvokedWithUser_ThenUserSaved" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRepositoryTest.whenFindById_ThenReturnedValidUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="database" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shukalovich.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shukalovich.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.shukalovich.repository.UserRepositoryTest" />
-      <option name="METHOD_NAME" value="whenFindById_ThenReturnedValidUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service" />
       <extension name="coverage">
         <pattern>
@@ -205,7 +162,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.shukalovich.service" />
       <option name="MAIN_CLASS_NAME" value="com.shukalovich.service.UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="findById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.whenUserCreated_ThenIdReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shukalovich.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shukalovich.service" />
+      <option name="MAIN_CLASS_NAME" value="com.shukalovich.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="whenUserCreated_ThenIdReturned" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -297,21 +271,48 @@
         </option>
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.local.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.local.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.local.yaml.adminer: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="adminer" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.local.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="JUnit.UserRepositoryExtensionTest" />
+      <item itemvalue="Docker.docker-compose.local.yaml.adminer: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.local.yaml: Compose Deployment" />
       <item itemvalue="JUnit.UserRepositoryTest" />
-      <item itemvalue="JUnit.UserRepositoryTest.whenCreatedInvokedWithUser_ThenUserSaved" />
-      <item itemvalue="JUnit.UserRepositoryTest.whenFindById_ThenReturnedValidUser" />
-      <item itemvalue="JUnit.UserServiceTest" />
+      <item itemvalue="JUnit.UserServiceTest.findById" />
+      <item itemvalue="JUnit.UserServiceTest.whenUserCreated_ThenIdReturned" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.27" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceTest.findById" />
         <item itemvalue="JUnit.UserRepositoryTest" />
-        <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.UserRepositoryExtensionTest" />
-        <item itemvalue="JUnit.UserRepositoryTest.whenFindById_ThenReturnedValidUser" />
-        <item itemvalue="JUnit.UserRepositoryTest.whenCreatedInvokedWithUser_ThenUserSaved" />
+        <item itemvalue="Docker.docker-compose.local.yaml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.local.yaml.adminer: Compose Deployment" />
+        <item itemvalue="JUnit.UserServiceTest.whenUserCreated_ThenIdReturned" />
       </list>
     </recent_temporary>
   </component>
@@ -323,11 +324,46 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690458340485</updated>
-      <workItem from="1690458341784" duration="30927000" />
+      <workItem from="1690458341784" duration="48442000" />
+      <workItem from="1690804667021" duration="20000" />
+      <workItem from="1690804694040" duration="4023000" />
+      <workItem from="1690808866615" duration="10744000" />
+      <workItem from="1690834431365" duration="16666000" />
     </task>
+    <task id="LOCAL-00001" summary="First commit.">
+      <created>1690723940982</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690723940982</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added flyway migration and validation.">
+      <created>1690810368326</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690810368326</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit." />
+    <MESSAGE value="Added flyway migration and validation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added flyway migration and validation." />
   </component>
 </project>

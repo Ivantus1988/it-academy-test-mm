@@ -2,7 +2,6 @@ package com.shukalovich.service;
 
 import com.shukalovich.dto.UserCreationDto;
 import com.shukalovich.dto.UserFilter;
-import com.shukalovich.dto.UserReadDto;
 import com.shukalovich.entity.UserEntity;
 import com.shukalovich.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -40,4 +39,7 @@ public class UserService {
                 .collect(Collectors.toList());
     }
 
+    public List<UserEntity> findAll() {
+        return userRepository.findAll();
+    }
 }

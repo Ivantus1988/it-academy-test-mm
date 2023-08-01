@@ -9,6 +9,8 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+import static com.shukalovich.util.PagesUtil.*;
+
 public class WebDispatcherInitializer implements WebApplicationInitializer {
 
     @Override
@@ -22,6 +24,6 @@ public class WebDispatcherInitializer implements WebApplicationInitializer {
         ServletRegistration.Dynamic appServlet =
                 sc.addServlet("mvc", new DispatcherServlet(new GenericWebApplicationContext()));
         appServlet.setLoadOnStartup(1);
-        appServlet.addMapping("/");
+        appServlet.addMapping(SLASH);
     }
 }

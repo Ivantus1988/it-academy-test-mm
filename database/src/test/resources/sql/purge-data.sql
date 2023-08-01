@@ -1,3 +1,2 @@
 DELETE
-FROM users
-WHERE TRUE;
+FROM users;

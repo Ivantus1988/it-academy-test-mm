@@ -31,7 +31,8 @@ public class DatabaseConfig {
             @Value("${db.driver}") String driver,
             @Value("${db.url}") String url,
             @Value("${db.username}") String username,
-            @Value("${db.password}") String password) {
+            @Value("${db.password}") String password
+    ) {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(driver);
         dataSource.setUrl(url);

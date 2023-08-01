@@ -12,7 +12,9 @@ import org.thymeleaf.spring6.SpringTemplateEngine;
 import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring6.view.ThymeleafViewResolver;
 
+import static com.shukalovich.util.PagesUtil.FIRST_PAGE;
 import static com.shukalovich.util.PagesUtil.PREFIX;
+import static com.shukalovich.util.PagesUtil.SLASH;
 import static com.shukalovich.util.PagesUtil.SUFFIX;
 
 @Configuration
@@ -48,6 +50,6 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("index");
+        registry.addViewController(SLASH).setViewName(FIRST_PAGE);
     }
 }
